@@ -45,18 +45,18 @@ class CaloriesCalculator {
     }
     getAllDishesInfo() {
         console.log(this.newDish[0]);
-        let a = []
+        let render = []
         for(let i = 0; i < this.newDish[0].dishArray.length; i++){
-            let aa = this.newDish[0].dishArray[i].grams;
-            let ss = this.newDish[0].dishArray[i].name.nameProduct;
-            let gg = this.newDish[0].dishArray[i].name.calories
-            a.push(ss + ', ' + aa + 'гр ' + gg + 'ккал\n');
+            let str1 = this.newDish[0].dishArray[i].grams;
+            let str2 = this.newDish[0].dishArray[i].name.nameProduct;
+            let str3 = this.newDish[0].dishArray[i].name.calories
+            render.push(str2 + ', ' + str1 + 'гр ' + str3 + 'ккал\n');
 
 
 
         }
         console.log('============================================');
-        const dishes = this.newDish[0].dishName + ' 1'  + ' порция, ' + calories + ' ккал' + '\n' + ',' + a;
+        const dishes = this.newDish[0].dishName + ' 1'  + ' порция, ' + calories + ' ккал' + '\n' + ',' + render;
         console.log(dishes);
         console.log('============================================');
     }
